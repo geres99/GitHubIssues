@@ -1,6 +1,7 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
+    "test": "jest",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -9,9 +10,20 @@
     "storybook": "start-storybook -s assets -p 6006",
     "build:storybook": "build-storybook -c .storybook -o storybook-build -s assets"
   },
+  "name": "food-delivery-app",
+  "jest": {
+    "preset": "react-native",
+    "modulePaths": [
+      "<rootDir>"
+    ]
+  },
   "dependencies": {
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
+    "@testing-library/react-native": "^8.0.0",
+    "@types/jest": "^27.0.3",
+    "@types/react-test-renderer": "^17.0.1",
+    "babel-plugin-module-resolver": "^4.1.0",
     "expo": "~43.0.2",
     "expo-app-loading": "^1.2.1",
     "expo-cli": "^4.13.0",
@@ -22,7 +34,8 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.9.0",
     "react-native-web": "^0.17.5",
-    "styled-components": "^5.3.3",
+    "react-test-renderer": "^17.0.2",
+    "styled-components": "5.2.1",
     "styled-system": "^5.1.5",
     "url-join": "^4.0.1"
   },
@@ -34,11 +47,13 @@
     "@storybook/react": "^6.4.0-rc.6",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
-    "@types/styled-components": "^5.1.15",
+    "@types/styled-components": "5.1.4",
     "@types/styled-system": "^5.1.13",
     "@types/url-join": "^4.0.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-native-web": "^0.17.5",
+    "jest": "^27.3.1",
+    "react-native-typescript-transformer": "^1.2.13",
     "typescript": "~4.3.5"
   },
   "private": true

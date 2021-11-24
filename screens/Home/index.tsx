@@ -5,11 +5,8 @@ import StyledView from "../../components/styles/StyledView/styles";
 
 const HomeScreen = () => (
   <View>
-    <Typography>Duuuuppppa</Typography>
-    <Typography>Duuuuppppa</Typography>
-    <Typography>Duuuuppppa</Typography>
-    <StyledView py={20}>
-      <Text>Duppppa</Text>
+    <StyledView pt={20}>
+      <Typography>Hello World!</Typography>
     </StyledView>
   </View>
 );

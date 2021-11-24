@@ -1,7 +1,43 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "jsx": "react",
-    "strict": true
-  }
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "target": "ES5",
+    "strict": true,
+    "paths": {
+      "assets/*": ["./assets/*"],
+      "components/*": ["./components/*"],
+      "contexts/*": ["./contexts/*"],
+      "hooks/*": ["./hooks/*"],
+      "screens/*": ["./screens/*"],
+      "setup/*": ["./setup/*"],
+      "theme/*": ["./theme/*"],
+      "utils/*": ["./utils/*"],
+      "api/*": ["./api/*"],
+      "__mocks__/*": ["./__mocks__/*"]
+    }
+  },
+  "include": [
+    "./.storybook/*",
+    "./api/**/*",
+    "./**/*",
+    "./assets/**/*",
+    "./components/**/*",
+    "./contexts/**/*",
+    "./hooks/**/*",
+    "./screens/**/*",
+    "./setup/**/*",
+    "./theme/**/*",
+    "./utils/**/*",
+    "./@types/*",
+    "./__mocks__/*"
+  ],
+  "exclude": ["node_modules"]
 }
