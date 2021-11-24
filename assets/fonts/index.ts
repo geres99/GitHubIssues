@@ -1,5 +1,5 @@
-import sourceSansProBold from "./SourceSansPro-Bold.ttf";
-import sourceSansProSemiBold from "./SourceSansPro-SemiBold.ttf";
-import sourceSansProRegular from "./SourceSansPro-Regular.ttf";
+import sourceSansProBold from "./sourcesanspro-bold.ttf";
+import sourceSansProSemiBold from "./sourcesanspro-semibold.ttf";
+import sourceSansProRegular from "./sourcesanspro-regular.ttf";
 
 export { sourceSansProBold, sourceSansProSemiBold, sourceSansProRegular };

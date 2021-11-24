@@ -1,24 +1,23 @@
 import { createGlobalStyle } from "styled-components";
-import { makeStorybookAssetUrl } from "../utils/storybook";
 
 export default createGlobalStyle`
   @font-face {
       font-family: 'sourceSansProBold';
-      src: url(${makeStorybookAssetUrl("/fonts/SourceSansPro-Bold.ttf")});
+      src: url("/fonts/sourcesanspro-bold.ttf");
       font-weight: normal;
       font-style: normal;
       font-display: swap;
   }
   @font-face {
     font-family: 'sourceSansProSemiBold';
-    src: url(${makeStorybookAssetUrl("/fonts/SourceSansPro-SemiBold.ttf")});
+    src: url("/fonts/sourcesanspro-semibold.ttf");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
       font-family: 'sourceSansProRegular';
-      src: url(${makeStorybookAssetUrl("/fonts/SourceSansPro-Regular.ttf")});
+      src: url("/fonts/sourcesanspro-regular.ttf");
       font-weight: normal;
       font-style: normal;
       font-display: swap;

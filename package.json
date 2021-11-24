@@ -6,8 +6,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -s assets -p 6006",
+    "build:storybook": "build-storybook -c .storybook -o storybook-build -s assets"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.6",
@@ -23,6 +23,7 @@
     "react-native-screens": "^3.9.0",
     "react-native-web": "^0.17.5",
     "styled-components": "^5.3.3",
+    "styled-system": "^5.1.5",
     "url-join": "^4.0.1"
   },
   "devDependencies": {
@@ -34,6 +35,7 @@
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
     "@types/styled-components": "^5.1.15",
+    "@types/styled-system": "^5.1.13",
     "@types/url-join": "^4.0.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-react-native-web": "^0.17.5",
