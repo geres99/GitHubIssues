@@ -9,8 +9,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "resolveJsonModule": true,
-    "target": "ES5",
     "strict": true,
+    "target": "ES6",
     "paths": {
       "assets/*": ["./assets/*"],
       "components/*": ["./components/*"],
