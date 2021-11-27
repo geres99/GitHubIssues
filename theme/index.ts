@@ -1,5 +1,5 @@
-import { typography } from "./config/typography";
-import { spacing } from "./config/spacing";
+import { typography } from './config/typography';
+import { spacing } from './config/spacing';
 
 const theme = {
   typography,

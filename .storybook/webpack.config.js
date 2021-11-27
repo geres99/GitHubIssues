@@ -1,12 +1,12 @@
 module.exports = ({ config }) => {
-  config.resolve.alias["react-native-svg"] = "react-native-svg-web";
-  config.resolve.alias["react-native"] = "react-native-web";
+  config.resolve.alias['react-native-svg'] = 'react-native-svg-web';
+  config.resolve.alias['react-native'] = 'react-native-web';
 
   config.module.rules.push({
     test: /\.svg$/,
     use: [
       {
-        loader: "@svgr/webpack",
+        loader: '@svgr/webpack',
         options: {
           svgoConfig: {
             plugins: {
@@ -19,7 +19,7 @@ module.exports = ({ config }) => {
   });
 
   const fileLoaderRule = config.module.rules.find(
-    ({ loader }) => loader && loader.includes("file-loader")
+    ({ loader }) => loader && loader.includes('file-loader')
   );
 
   if (fileLoaderRule) {

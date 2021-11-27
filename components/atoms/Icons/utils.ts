@@ -1,4 +1,4 @@
-import { IconsCategoryItem } from "./types";
+import { IconsCategoryItem } from './types';
 
 export const getAllIcons = (
   context: __WebpackModuleApi.RequireContext

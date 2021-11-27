@@ -1,9 +1,11 @@
-const { getDefaultConfig } = require("expo/metro-config");
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { getDefaultConfig } = require('expo/metro-config');
 
 module.exports = {
   transformer: {
     babelTransformerPath: require.resolve(
-      "react-native-typescript-transformer"
+      'react-native-typescript-transformer'
     ),
   },
 };
@@ -14,11 +16,11 @@ module.exports = (async () => {
   } = await getDefaultConfig(__dirname);
   return {
     transformer: {
-      babelTransformerPath: require.resolve("react-native-svg-transformer"),
+      babelTransformerPath: require.resolve('react-native-svg-transformer'),
     },
     resolver: {
-      assetExts: assetExts.filter((ext) => ext !== "svg"),
-      sourceExts: [...sourceExts, "svg"],
+      assetExts: assetExts.filter((ext) => ext !== 'svg'),
+      sourceExts: [...sourceExts, 'svg'],
     },
   };
 })();

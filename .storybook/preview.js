@@ -1,13 +1,13 @@
-import React from "react";
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
-import Fonts from "./fonts";
-import ThemeWrapper from "../theme/ThemeContextWrapper";
-import StyledView from "components/styles/StyledView/styles";
+import React from 'react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import Fonts from './fonts';
+import ThemeWrapper from '../theme/ThemeContextWrapper';
+import StyledView from 'components/styles/StyledView/styles';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   backgrounds: {
-    default: "grey",
+    default: 'grey',
   },
   controls: {
     matchers: {
@@ -17,9 +17,9 @@ export const parameters = {
   },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
-    defaultViewport: "iphone6",
+    defaultViewport: 'iphone6',
   },
-  layout: "fullscreen",
+  layout: 'fullscreen',
 };
 
 export const decorators = [

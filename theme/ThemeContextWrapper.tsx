@@ -1,6 +1,6 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
-import theme from ".";
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import theme from '.';
 
 const ThemeWrapper: React.FC = ({ children }) => (
   <ThemeProvider {...{ theme }}>{children}</ThemeProvider>
