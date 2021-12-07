@@ -5,6 +5,18 @@ export const fonts = {
 };
 
 export const typography = {
+  h1: {
+    fontSize: 45,
+    fontFamily: fonts.sourceSansProSemiBold,
+  },
+  h3: {
+    fontSize: 25,
+    fontFamily: fonts.sourceSansProSemiBold,
+  },
+  h3Bold: {
+    fontSize: 25,
+    fontFamily: fonts.sourceSansProBold,
+  },
   h4Light: {
     fontSize: 14,
     fontFamily: fonts.sourceSansProRegular,

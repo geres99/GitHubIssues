@@ -8,6 +8,8 @@ import {
   sourceSansProSemiBold,
 } from './assets/fonts/index';
 import MainNavigation from './setup/navigation';
+import UserContextWrapper from 'contexts/UserContext/UserContextWrapper';
+import ThemeWrapper from 'theme/ThemeContextWrapper';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,8 +19,12 @@ export default function App() {
   });
 
   return (
-    <NavigationContainer>
-      {fontsLoaded ? <MainNavigation /> : <AppLoading />}
-    </NavigationContainer>
+    <UserContextWrapper>
+      <ThemeWrapper>
+        <NavigationContainer>
+          {fontsLoaded ? <MainNavigation /> : <AppLoading />}
+        </NavigationContainer>
+      </ThemeWrapper>
+    </UserContextWrapper>
   );
 }

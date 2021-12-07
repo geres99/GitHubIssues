@@ -1,3 +1,3 @@
 export interface TypographyProps {
-  variant?: 'h4Light' | 'h4' | 'h4Bold';
+  variant?: 'h1' | 'h3' | 'h3Bold' | 'h4Light' | 'h4' | 'h4Bold';
 }
