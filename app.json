@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "food-delivery-app",
-    "slug": "food-delivery-app",
+    "name": "github-issues",
+    "slug": "github-issues",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

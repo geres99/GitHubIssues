@@ -2,12 +2,19 @@ import React from 'react';
 import StyledView from 'components/styles/StyledView/styles';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StyledScreenContentWrapper } from './styles';
+import { ScreenContentWrapperProps } from './types';
 
-const ScreenContentWrapper: React.FC = ({ children }) => {
+const ScreenContentWrapper: React.FC<ScreenContentWrapperProps> = ({
+  areItemsCentered,
+  children,
+}) => {
   const { top } = useSafeAreaInsets();
 
   return (
-    <StyledScreenContentWrapper testID='ScreenContentWrapper'>
+    <StyledScreenContentWrapper
+      {...{ areItemsCentered }}
+      testID='ScreenContentWrapper'
+    >
       <StyledView pt={top}>{children}</StyledView>
     </StyledScreenContentWrapper>
   );

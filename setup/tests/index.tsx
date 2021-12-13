@@ -14,7 +14,7 @@ export const wrapper: React.FC = ({ children }) => (
 );
 
 const customRender = (
-  ui: React.ReactElement<any>,
+  ui: React.ReactElement<unknown>,
   options?: RenderOptions
 ): RenderAPI => render(ui, { ...{ wrapper }, ...options });
 

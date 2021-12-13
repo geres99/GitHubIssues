@@ -1,4 +1,5 @@
 import React from 'react';
+import { LogBox } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from 'screens/Home';
 import WelcomeScreen from 'screens/Welcome';
@@ -7,6 +8,10 @@ import InformationScreen from 'screens/Information';
 
 const MainNavigation = () => {
   const Stack = createNativeStackNavigator();
+
+  LogBox.ignoreLogs([
+    'Non-serializable values were found in the navigation state',
+  ]);
 
   return (
     <Stack.Navigator initialRouteName={ScreenNames.Welcome}>

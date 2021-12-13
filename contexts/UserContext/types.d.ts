@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 
 export interface CommentsProps {
-  id?: number;
+  id: number;
   comments?: string[];
 }
 

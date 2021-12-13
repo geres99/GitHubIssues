@@ -10,6 +10,7 @@ import {
 import MainNavigation from './setup/navigation';
 import UserContextWrapper from 'contexts/UserContext/UserContextWrapper';
 import ThemeWrapper from 'theme/ThemeContextWrapper';
+import Toast from 'react-native-toast-message';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,6 +24,7 @@ export default function App() {
       <ThemeWrapper>
         <NavigationContainer>
           {fontsLoaded ? <MainNavigation /> : <AppLoading />}
+          <Toast />
         </NavigationContainer>
       </ThemeWrapper>
     </UserContextWrapper>
