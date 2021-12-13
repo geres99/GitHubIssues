@@ -17,7 +17,13 @@ const InformationScreen: React.FC<InformationScreenProps> = ({ route }) => {
 
   return (
     <ScreenContentWrapper>
-      <KeyboardAwareScrollView>
+      <KeyboardAwareScrollView
+        bounces={false}
+        enableOnAndroid
+        enableResetScrollToCoords={false}
+        extraHeight={200}
+        automaticallyAdjustContentInsets={false}
+      >
         <StyledView p={2}>
           <HeaderWithDescription header='Title:' description={item.title} />
           <HeaderWithDescription header='State:' description={item.state} />
