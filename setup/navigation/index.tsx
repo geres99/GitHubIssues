@@ -28,7 +28,11 @@ const MainNavigation = () => {
       <Stack.Screen
         name={ScreenNames.Information}
         component={InformationScreen}
-        options={{ title: 'Additional Information' }}
+        options={{
+          title: 'Additional Information',
+          headerLargeTitleShadowVisible: false,
+          headerShadowVisible: false,
+        }}
       />
     </Stack.Navigator>
   );
