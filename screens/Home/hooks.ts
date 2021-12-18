@@ -50,7 +50,7 @@ const useHomeScreen = () => {
         title.toLocaleLowerCase().includes(inputValue.toLocaleLowerCase())
       )
     );
-  }, [inputValue]);
+  }, [inputValue, data]);
 
   return {
     data,
