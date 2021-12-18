@@ -32,7 +32,7 @@ const WelcomeScreen: React.FC = () => {
         <StyledView pt={40} px={20}>
           <Typography variant='h3'>
             *Note: Token isnt required and you can still continue without it,
-            but API calls will be limited to 60/hour instead od 1000/hour.
+            but API calls will be limited.
           </Typography>
         </StyledView>
       </StyledView>

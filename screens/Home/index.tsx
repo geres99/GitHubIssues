@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import StyledView from 'components/styles/StyledView/styles';
 import ScreenContentWrapper from 'components/molecules/ScreenContentWrapper';
 import Typography from 'components/atoms/Typography';
@@ -11,6 +11,7 @@ import Avatar from 'components/atoms/Avatar';
 import AnimatedLoader from 'components/styles/AnimatedLoader';
 import Input from 'components/atoms/Input';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { KeyboardAwareFlatList } from 'react-native-keyboard-aware-scroll-view';
 
 const HomeScreen: React.FC = () => {
   const { data, getData, isLoading, inputValue, setInputValue, filteredData } =
@@ -33,7 +34,12 @@ const HomeScreen: React.FC = () => {
               />
             </StyledView>
           </StyledView>
-          <FlatList
+          <KeyboardAwareFlatList
+            bounces={false}
+            enableOnAndroid
+            enableResetScrollToCoords={false}
+            extraHeight={200}
+            automaticallyAdjustContentInsets={false}
             renderItem={(item) => (
               <TouchableOpacity
                 onPress={() =>
