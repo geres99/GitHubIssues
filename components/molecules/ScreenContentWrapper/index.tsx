@@ -5,17 +5,25 @@ import { StyledScreenContentWrapper } from './styles';
 import { ScreenContentWrapperProps } from './types';
 
 const ScreenContentWrapper: React.FC<ScreenContentWrapperProps> = ({
+  withoutTopInsets,
   areItemsCentered,
   children,
 }) => {
-  const { top } = useSafeAreaInsets();
+  const { top, bottom } = useSafeAreaInsets();
 
   return (
     <StyledScreenContentWrapper
       {...{ areItemsCentered }}
       testID='ScreenContentWrapper'
     >
-      <StyledView pt={top}>{children}</StyledView>
+      <StyledView
+        justifyContent={areItemsCentered ? 'center' : undefined}
+        flex={1}
+        pt={!withoutTopInsets ? top : undefined}
+        pb={bottom}
+      >
+        {children}
+      </StyledView>
     </StyledScreenContentWrapper>
   );
 };

@@ -9,9 +9,13 @@ import { useNavigation } from '@react-navigation/native';
 import { HomeScreenNavigationProp } from './types';
 import Avatar from 'components/atoms/Avatar';
 import AnimatedLoader from 'components/styles/AnimatedLoader';
+import Input from 'components/atoms/Input';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const HomeScreen: React.FC = () => {
-  const { data, getData, isLoading } = useHomeScreen();
+  const { data, getData, isLoading, inputValue, setInputValue, filteredData } =
+    useHomeScreen();
+  const { bottom } = useSafeAreaInsets();
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
   return (
@@ -19,7 +23,16 @@ const HomeScreen: React.FC = () => {
       {isLoading ? (
         <AnimatedLoader />
       ) : (
-        <StyledView flexGrow={1}>
+        <StyledView flex={1}>
+          <StyledView py={2} flexDirection='row'>
+            <StyledView flex={1}>
+              <Input
+                placeholder='Search...'
+                value={inputValue}
+                onChangeText={(value) => setInputValue(value)}
+              />
+            </StyledView>
+          </StyledView>
           <FlatList
             renderItem={(item) => (
               <TouchableOpacity
@@ -50,11 +63,17 @@ const HomeScreen: React.FC = () => {
             onEndReachedThreshold={0.5}
             onEndReached={getData}
             ListEmptyComponent={
-              <StyledView alignItems='center' pt={2}>
+              <StyledView
+                flex={1}
+                flexDirection='row'
+                justifyContent='center'
+                pt={2}
+              >
                 <Typography variant='h1'>No data found.</Typography>
               </StyledView>
             }
-            {...{ data }}
+            ListFooterComponent={() => <StyledView pb={bottom} />}
+            data={inputValue ? filteredData : data}
           />
         </StyledView>
       )}
